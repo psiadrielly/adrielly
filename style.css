@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-color: #374f7b;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --stroke-color-img: #d4ae32;
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background: var(--bg-color);
+  height: 100vh;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto 0px;
+  padding: 0 40px;
+}
+
+/* profile */
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 165px;
+  border-radius: 50%;
+  border: 2.5px solid var(--stroke-color-img);
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 10px;
+  font-family: 'Noto Serif Khojki', serif;
+}
+
+/* links */
+
+ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px 0 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+
+  color: #d4ae32;
+  border: 1.5px solid #d4ae32;
+}
+
+/* social links */
+
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 25px 0 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background-color: rgba(212, 174, 50, 70%);
+}
+
+/* logo */
+
+.logo {
+  text-align: center;
+  padding-block: 10px;
+}
+
+.logo img {
+  width: 300px;
+}
+
+/* media queries */
+
+@media (max-width: 500px) {
+  #container {
+    padding: 0 25px;
+  }
+  #profile img {
+    width: 160px;
+  }
+}
